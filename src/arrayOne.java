@@ -43,5 +43,60 @@ public class arrayOne {
         }
         return result;
     }
+    public int sum2(int[] nums) {
+        int result= 0;
+        for(int i = 0; i<nums.length;i++){
+            if(nums.length >= 2){
+                result = nums[0] + nums[1];
+
+            } else if (nums.length == 1){
+                result = nums[0];
+
+            } else
+                result = 0;
+
+        }
+        return result;
+    }
+    public int[] middleWay(int[] a, int[] b) {
+        int [] newArray = new int[]{a[1],b[1]};
+        return newArray;
+    }
+    public int[] makeEnds(int[] nums) {
+        int[] newArray = new int[]{nums[0], nums[nums.length-1]};
+        return newArray;
+    }
+    public boolean has23(int[] nums) {
+        for(int num : nums){
+            if(num == 2 || num == 3){
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean no23(int[] nums) {
+        for(int num : nums){
+            if(num == 2 || num == 3)
+                return false;
+        }
+        return true;
+    }
+    public int[] makeLast(int[] nums) {
+        int [] newArray = new int[nums.length*2];
+        if(nums.length>=1){
+            for(int i = 0; i<nums.length; i++){
+                newArray[newArray.length-1] = nums[nums.length-1];
+            }
+        }
+        return newArray;
+    }
+    public boolean double23(int[] nums) {
+        if(nums.length == 2){
+            if(nums[0]==2 && nums[1]==2 || nums[0] ==3 && nums[1] == 3){
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
